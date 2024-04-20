@@ -1,0 +1,10 @@
+.saludo{
+    padding: 50px;
+    font-size: 60px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+.saludo:hover{
+    color: red;
+}

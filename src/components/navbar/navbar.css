@@ -1,0 +1,24 @@
+.divNavBar{
+    justify-content:space-around;
+    align-items: center;
+    color: whitesmoke;
+    background-color: rgb(37, 36, 36)
+}
+.divLogo{
+    width: 40%;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 40%;
+    align-items: center;
+}
+li:hover{
+    color: gray;
+}
+.cart-navbar{
+    display: flex;
+    align-items: center;
+}
+
