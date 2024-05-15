@@ -1,11 +1,18 @@
 .divNavBar{
+    display: flex;
     justify-content:space-around;
     align-items: center;
     color: whitesmoke;
-    background-color: rgb(37, 36, 36)
+    background-color:#222222;
 }
 .divLogo{
-    width: 40%;
+    width: 80px;
+}
+.img-logo{
+    width: 50px;
+}
+.img-logo:hover{
+    width: 60px;
 }
 ul{
     display: flex;

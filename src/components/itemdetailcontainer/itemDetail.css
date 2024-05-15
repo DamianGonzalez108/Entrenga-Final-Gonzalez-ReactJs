@@ -1,0 +1,15 @@
+.detail-card{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.div-img-detail{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+.div-detail-product{
+    text-align: center;
+    width: 40%;
+}
