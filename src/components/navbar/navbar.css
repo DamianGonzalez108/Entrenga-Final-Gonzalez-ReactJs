@@ -1,9 +1,12 @@
 .divNavBar{
+    width: 100%;
+    height: 55px;
     display: flex;
     justify-content:space-around;
     align-items: center;
     color: whitesmoke;
     background-color:#222222;
+    position: fixed;
 }
 .divLogo{
     width: 80px;
@@ -12,7 +15,7 @@
     width: 50px;
 }
 .img-logo:hover{
-    width: 60px;
+    scale: 1.2;
 }
 ul{
     display: flex;
@@ -21,11 +24,12 @@ ul{
     width: 40%;
     align-items: center;
 }
-li:hover{
+.link-category:hover{
+    scale: 1.2;
     color: gray;
 }
-.cart-navbar{
-    display: flex;
-    align-items: center;
+.link-category{
+    text-decoration: none;
+    color: white;
 }
 

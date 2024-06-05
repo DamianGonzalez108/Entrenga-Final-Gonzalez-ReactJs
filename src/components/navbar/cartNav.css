@@ -1,0 +1,9 @@
+.cart-navbar{
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    text-decoration: none;
+}
+.cart-navbar:hover{
+    scale: 1.2;
+}

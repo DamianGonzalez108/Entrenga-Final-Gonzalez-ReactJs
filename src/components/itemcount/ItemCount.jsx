@@ -1,30 +1,38 @@
 import { useState } from "react";
+import { MdArrowBackIosNew } from "react-icons/md";
+import { MdArrowForwardIos } from "react-icons/md";
+import "./itemCount.css"
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, addProduct}) => {
   const [count, setCount] = useState(1);
 
-  const restar = () => {
+  const handleClickDecrement = () => {
     if (count > 1) {
       setCount(count - 1);
     }
   };
 
-  const sumar = () => {
+  const handleClickIncrement = () => {
     if(count < stock){
           setCount(count + 1);
     }
   };
 
-  const agregarAlCarrito = () => {
-    console.log(count)
+  const handleClickAddToCart = () => {
+    addProduct(count)
   }
 
   return (
-    <div>
-      <button onClick={restar}>-</button>
-      <p>{count}</p>
-      <button onClick={sumar}>+</button>
-      <button onClick={agregarAlCarrito}>Agregar al Carrito</button>
+    <div className="firstDivItemCount">
+      <div className="secondDivItemCount">
+       <MdArrowBackIosNew className="arrowCount" onClick={handleClickDecrement}/>
+        <p className="numberCount">{count}</p>
+       <MdArrowForwardIos className="arrowCount" onClick={handleClickIncrement}/> 
+      </div>
+      <div>
+        <button className="buttonAddToCart" onClick={handleClickAddToCart}>Agregar al Carrito</button>
+      </div>     
+   
     </div>
   );
 };

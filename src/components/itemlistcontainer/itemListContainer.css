@@ -1,8 +1,14 @@
-.saludo{
-    padding: 20px;
-    font-size: 30px;
-    font-weight: 500;
+.itemListContainer{
+    padding-top: 70px;
+}
+.tittlePages{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 900;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    background-color: #222222;
+    border: 2px solid white;
+    border-radius: 12px;
+    color: whitesmoke;
 }

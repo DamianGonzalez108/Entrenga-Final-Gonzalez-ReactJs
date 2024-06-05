@@ -1,12 +1,21 @@
 import { IoCartOutline } from "react-icons/io5";
-import "./navbar.css"
-const CartNav = () => {
-  return (
-    <div className="cart-navbar">
-      <IoCartOutline size={30} />
-      <p>1</p>    
-    </div>
-  )
-}
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
-export default CartNav
+import "./cartNav.css";
+
+const CartNav = () => {
+  const { quantityTotal } = useContext(CartContext);
+
+  let quantity = quantityTotal();
+
+  return (
+    <Link to="/cart" className="cart-navbar">
+      <IoCartOutline size={30} />
+      <p className="quantityCart">{quantity >= 1 && quantity}</p>
+    </Link>
+  );
+};
+
+export default CartNav;
