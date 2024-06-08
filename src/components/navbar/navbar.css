@@ -2,14 +2,17 @@
     width: 100%;
     height: 55px;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     color: whitesmoke;
-    background-color:#222222;
+    background-color: #222222;
     position: fixed;
 }
 .divLogo{
-    width: 80px;
+    display: flex;
+    width: 5%;
+    align-items: center;
+    justify-content: center;
 }
 .img-logo{
     width: 50px;
@@ -23,6 +26,7 @@ ul{
     list-style-type: none;
     width: 40%;
     align-items: center;
+    padding: 0px;
 }
 .link-category:hover{
     scale: 1.2;

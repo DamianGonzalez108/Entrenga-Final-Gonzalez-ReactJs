@@ -7,19 +7,18 @@ import db from "../../db/db.js";
 import { Link } from "react-router-dom";
 import validateForm from "../../utils/validationYup.js";
 import { toast } from "react-toastify";
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
-
-
-
+import "./checkout.css"
 
 const Checkout = () => {
-  const MySwal = withReactContent(Swal)
+  const MySwal = withReactContent(Swal);
   const [dataForm, setDataForm] = useState({
     name: "",
     phone: "",
     email: "",
+    confirmEmail:"",
   });
 
   const [idOrder, setIdOrder] = useState(null);
@@ -39,27 +38,31 @@ const Checkout = () => {
     };
     try {
       const response = await validateForm(dataForm);
-      if (response.status === "success") {
+      if (response.status === "success"){
+        if(dataForm.email === dataForm.confirmEmail){
         MySwal.fire({
-          title: "Do you want to save the changes?",
+          title: "¿Quieres guardar los cambios?",
           showDenyButton: true,
           showCancelButton: true,
-          confirmButtonText: "Save",
-          denyButtonText: `Don't save`
+          confirmButtonText: "Si",
+          denyButtonText: `No`,
         }).then((result) => {
           /* Read more about isConfirmed, isDenied below */
           if (result.isConfirmed) {
-            Swal.fire("Saved!", "", "success");
+            generateOrder(order);
+            Swal.fire("Guardado con exito", "", "success");
           } else if (result.isDenied) {
-            Swal.fire("Changes are not saved", "", "info");
+            Swal.fire("Los cambios no seran guardados", "", "info");
           }
-        }),setTimeout(5000);
-        generateOrder(order);
+        });
+        }else{
+          toast.warning("Verifica que tu email coincida")
+        }
       } else {
-       toast.warning(response.message)
+        toast.warning(response.message);
       }
     } catch (error) {
-      console.log(error);
+      toast.warning(error.message);
     }
   };
 
@@ -67,7 +70,14 @@ const Checkout = () => {
     const ordersRef = collection(db, "orders");
     addDoc(ordersRef, order)
       .then((res) => setIdOrder(res.id))
-      .catch((error) => console.log(error))
+      .catch((error) =>
+        MySwal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: error.message,
+          footer: "<p>Por favor vuelva a intentar en unos segundos</p>",
+        })
+      )
       .finally(() => {
         updateStock();
         deleteAll();
@@ -88,7 +98,7 @@ const Checkout = () => {
   };
 
   return (
-    <div>
+    <div className="divContainerCheckout">
       {idOrder ? (
         <div>
           <h2>Orden generada con exito</h2>

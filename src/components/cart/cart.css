@@ -1,0 +1,25 @@
+.divContainerCart,.divContainerEmptyCart{
+    padding-top: 70px;
+}
+.divContainerEmptyCart{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.divEmptyCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.linkSeeProducts{
+    text-decoration: none;
+}
+.buttonCart{
+    font-weight: 600;
+    border-radius: 5px;
+}
+.buttonCart:hover{
+    scale: 1.05;
+}

@@ -28,6 +28,14 @@ const Form = ({ dataForm, handleChangeInput, handleSubmitForm }) => {
           onChange={handleChangeInput}
         />
 
+        <label>Confirmar Email:</label>
+        <input
+          type="email"
+          name="confirmEmail"
+          value={dataForm.confirmEmail}
+          onChange={handleChangeInput}
+        />
+
         <button type="submit">Enviar orden</button>
       </form>
     </div>

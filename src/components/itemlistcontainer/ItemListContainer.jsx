@@ -24,18 +24,23 @@ const ItemListContainer = () => {
     });
   };
 
-  const getProductsByCategory = () => {
+  const getProductsByCategory = async () => {
     setLoading(true);
     const productsRef = collection(db, "products");
     const q = query(productsRef, where("category", "==", idCategory));
 
-    getDocs(q).then((productsDb) => {
+    try{
+         await getDocs(q).then((productsDb) => {
       const data = productsDb.docs.map((product) => {
         return { id: product.id, ...product.data() };
       });
       setProducts(data);
       setLoading(false);
     });
+    } catch(error){
+      console.error(error)
+    }
+ 
   };
 
   useEffect(() => {
