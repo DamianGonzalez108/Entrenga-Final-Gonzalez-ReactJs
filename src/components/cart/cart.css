@@ -23,3 +23,42 @@
 .buttonCart:hover{
     scale: 1.05;
 }
+.divProductCart{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.divContainerCart{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.divTotal{
+    width: 30%;
+    display: flex;
+    align-items: center;
+}.divCardDescription{
+    padding: 15px;
+}.divNameButtonX{
+    display: flex;
+    justify-content: space-between;
+}
+.buttonX{
+    scale: 0.6;
+    width: 70px;
+    border-radius: 10px;
+}
+.buttonX:hover{
+ background-color: red;
+}
+.divImgCart{
+    padding: 15px;
+}
+.imgProductCart{
+    border-radius: 10px;
+    border: 1px solid black;
+}

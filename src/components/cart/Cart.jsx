@@ -24,19 +24,22 @@ const Cart = () => {
   return (
     <div className="divContainerCart">
       {cart.map((productCart) => (
-        <div key={productCart.id}>
-          <div>
-            <img src={productCart.image} />
+        <div className="divProductCart" key={productCart.id}>
+          <div className="divImgCart">
+            <img src={productCart.image} className="imgProductCart" />
           </div>
-          <div>
-            <h3>{productCart.name}</h3>
+          <div className="divCardDescription">
+            <div className="divNameButtonX">
+              <h3>{productCart.name}</h3>
+              <button className="buttonX" onClick={() => deleteProduct(productCart.id)}>X</button>
+            </div>
+
             <p>{productCart.description}</p>
             <p>Cantidad:{productCart.quantity}</p>
-            <button onClick={() => deleteProduct(productCart.id)}>X</button>
           </div>
         </div>
       ))}
-      <div>
+      <div className="divTotal">
         <h3>Total:${totalPrice()}</h3>
         <Link to="/checkout">
           <button>Continuar con mi compra</button>
