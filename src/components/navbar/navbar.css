@@ -1,12 +1,11 @@
 .divNavBar{
     width: 100%;
-    height: 55px;
+    height: 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: whitesmoke;
-    background-color: #222222;
-    position: fixed;
+    background-color: #171d25;
 }
 .divLogo{
     display: flex;
@@ -28,12 +27,16 @@ ul{
     align-items: center;
     padding: 0px;
 }
-.link-category:hover{
-    scale: 1.2;
-    color: gray;
-}
 .link-category{
     text-decoration: none;
     color: white;
+    font-size: 19px;
+    font-weight: 400;
+}
+.link-category:hover{
+    scale: 1.08;
+    color:#1982cf;
+    border-bottom: #1982cf 3px solid;
+
 }
 

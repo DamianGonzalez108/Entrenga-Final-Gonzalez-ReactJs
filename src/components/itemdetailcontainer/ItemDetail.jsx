@@ -24,7 +24,7 @@ const ItemDetail = ({ product }) => {
         <p className="divDescriptionProduct">{product.description}</p>
         <p>Precio:${product.price}</p>
         {hiddenItemCount ? (<Link to="/cart">
-        <button>Ir al carrito</button>
+        <button className="buttonToCart">Ir al carrito</button>
         </Link>
         ) : (
           <ItemCount stock={product.stock} addProduct={addProduct} />

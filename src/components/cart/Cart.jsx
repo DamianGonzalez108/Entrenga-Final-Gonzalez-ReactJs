@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
+import { GoTrash } from "react-icons/go";
 
 import "./cart.css";
 
@@ -22,29 +23,52 @@ const Cart = () => {
   }
 
   return (
-    <div className="divContainerCart">
-      {cart.map((productCart) => (
-        <div className="divProductCart" key={productCart.id}>
-          <div className="divImgCart">
-            <img src={productCart.image} className="imgProductCart" />
-          </div>
-          <div className="divCardDescription">
-            <div className="divNameButtonX">
-              <h3>{productCart.name}</h3>
-              <button className="buttonX" onClick={() => deleteProduct(productCart.id)}>X</button>
+    <div>
+      <div className="divRoutes">
+        <Link to="/" className="routeHome">Inicio</Link>
+        {`>`}
+        <p className="routeCart">Carrito</p>
+      </div>
+      <div className="divContainerCart">
+        <div className="cardCartProduct">
+          {cart.map((productCart) => (
+            <div className="divProductCart" key={productCart.id}>
+              <div className="divImgCart">
+                <img src={productCart.image} className="imgProductCart" />
+              </div>
+              <div className="divCardDescription">
+                <div className="divName">
+                  <h3>{productCart.name}</h3>
+                </div>
+                <p>Cantidad:{productCart.quantity}</p>
+              </div>
+              <button
+                className="divButtonCart"
+                onClick={() => deleteProduct(productCart.id)}
+              >
+                <GoTrash size={20} />
+              </button>
             </div>
-
-            <p>{productCart.description}</p>
-            <p>Cantidad:{productCart.quantity}</p>
+          ))}
+        </div>
+        <div className="divTotal">
+          <div>
+            <p>Total estimado</p>
+            <p>${totalPrice()}</p>
+          </div>
+          <p>
+            Los impuestos de venta se calcularan durante el pago (si es
+            aplicable)
+          </p>
+          <div>
+            <Link to="/checkout">
+              <button className="buttonBuild">Finalizar compra</button>
+            </Link>
+            <button onClick={deleteAll} className="buttonClear">
+              Vaciar carrito
+            </button>
           </div>
         </div>
-      ))}
-      <div className="divTotal">
-        <h3>Total:${totalPrice()}</h3>
-        <Link to="/checkout">
-          <button>Continuar con mi compra</button>
-        </Link>
-        <button onClick={deleteAll}>Vaciar carrito</button>
       </div>
     </div>
   );
