@@ -1,18 +1,16 @@
 .detail-card{
-    color: #222222;
+    color:  #171d25;
     margin-top: 50px;
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-evenly;
-    border-top: 2px solid #222222;
-    border-bottom: 2px solid #222222;
 }
 .div-img-detail{
     width: 40%;
     display: flex;
     justify-content: center;
-    background-color: #222222;
+    background-color: #171d25;
 }
 .div-detail-product{
     height: 355px;

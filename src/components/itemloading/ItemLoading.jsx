@@ -6,7 +6,7 @@ const ItemLoading = () => {
   return (
     <div className="itemLoading">
       <div>
-        <HashLoader className="iconLoading" color="#222222" size={70} />
+        <HashLoader className="iconLoading" color="#1982cf" size={70} />
       </div>
       <div>
         <h2 className="titleLoading">Cargando...</h2>
