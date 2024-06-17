@@ -34,7 +34,7 @@ const products = [
         id: "4",
         price: 12000,
         name: "Counter-Stike GO",
-        image: "/src/assets/images/csgo.jpg",
+        image: "../assets/images/csgo.jpg",
         description: "Dos equipos de cinco compiten en un enfrentamiento al mejor de 30 rondas usando las reglas estándares competitivas de Counter-Strike. Los jugadores deben comprar armaduras, armas, equipos de desactivación o rescate y administrar su economía en el juego para maximizar sus posibilidades de éxito.",
         stock: 20,
         category:"shooter"
@@ -43,7 +43,7 @@ const products = [
         id: "5",
         price: 9000,
         name: "The Witcher",
-        image: "/src/assets/images/thewitcher.jpg",
+        image: "../../src/assets/images/thewitcher.jpg",
         description: "Se basa en la Saga de Geralt de Rivia del escritor polaco Andrzej Sapkowski. Ubicada en un mundo medieval en una masa de tierra conocida como el Continente, The Witcher explora la leyenda de Geralt de Rivia y la princesa Ciri, que están unidos el uno al otro por el destino.",
         stock: 20,
         category:"suspense"
