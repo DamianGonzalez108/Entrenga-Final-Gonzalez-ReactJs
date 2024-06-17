@@ -25,7 +25,7 @@ const products = [
         id: "3",
         price: 4500,
         name: "Call of Duty",
-        image: "/public/callofduty.jpg",
+        image: "/src/assets/images/callofduty.jpg",
         description: "Call of Duty es una serie de videojuegos de disparos en primera persona, de estilo bélico, desarrollada principal e inicialmente por Infinity Ward, Treyarch, Sledgehammer Games y en menor proporción Raven Software y distribuida por Activision.",
         stock: 20,
         category:"shooter"
