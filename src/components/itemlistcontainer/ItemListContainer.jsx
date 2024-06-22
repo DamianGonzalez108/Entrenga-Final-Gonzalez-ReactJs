@@ -29,18 +29,17 @@ const ItemListContainer = () => {
     const productsRef = collection(db, "products");
     const q = query(productsRef, where("category", "==", idCategory));
 
-    try{
-         await getDocs(q).then((productsDb) => {
-      const data = productsDb.docs.map((product) => {
-        return { id: product.id, ...product.data() };
+    try {
+      await getDocs(q).then((productsDb) => {
+        const data = productsDb.docs.map((product) => {
+          return { id: product.id, ...product.data() };
+        });
+        setProducts(data);
+        setLoading(false);
       });
-      setProducts(data);
-      setLoading(false);
-    });
-    } catch(error){
-      console.error(error)
+    } catch (error) {
+      console.error(error);
     }
- 
   };
 
   useEffect(() => {
@@ -50,11 +49,17 @@ const ItemListContainer = () => {
   }, [idCategory]);
 
   return (
-    <div className="itemListContainer">
-      <h1 className="tittlePages">
-        {idCategory ? `${idCategory.toLocaleUpperCase()}` : "NOVEDADES"}
-      </h1>
-      {loading ? <ItemLoading /> : <ItemList products={products} />}
+    <div>
+      <div className="itemListContainer"></div>
+        <div className="divListContainer">
+          <div className="divPortada">
+            <img src="/public/callofduty-portada.jpg" className="imgPortada" />
+          </div>
+          <h1 className="tittlePages">
+            {idCategory ? `${idCategory.toLocaleUpperCase()}` : "NOVEDADES"}
+          </h1>
+          {loading ? <ItemLoading /> : <ItemList products={products} />}
+        </div>
     </div>
   );
 };

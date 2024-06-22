@@ -1,9 +1,38 @@
+.itemListContainer{
+    background-image: url("/public/540654.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    filter: blur(1px);
+    z-index: -1;
+}
 .tittlePages{
     padding: 10px;
     font-size: 20px;
     font-weight: 900;
     display: flex;
     justify-content: center;
-    background-color:  #171d25;
+    background-color: #171d258f;
     color: whitesmoke;
+    margin-top: 10px;    
+}
+.divPortada{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+}
+.imgPortada{
+    width: 65%;
+    height: 200px;
+}
+.imgPortada:hover{
+    scale: 1.05;
+    transition: 1s;
 }

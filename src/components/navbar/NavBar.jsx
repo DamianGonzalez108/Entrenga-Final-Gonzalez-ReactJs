@@ -1,5 +1,7 @@
 import CartNav from "./CartNav"
 import {Link} from "react-router-dom"
+import { MdOutlineVideogameAsset } from "react-icons/md";
+
 
 import "./navbar.css"
 
@@ -7,7 +9,7 @@ const NavBar = () => {
   return (
     <div className="divNavBar">
         <Link to="/" className="divLogo">
-           <img src="/src/assets/images/logoNavBar.jpg" className="img-logo"/>
+           <MdOutlineVideogameAsset size={40} className="img-logo"/>
         </Link>
         <ul>
         <Link to="/category/deportes" className="link-category">DEPORTES</Link>

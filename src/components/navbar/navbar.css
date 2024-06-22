@@ -8,16 +8,11 @@
     background-color: #171d25;
 }
 .divLogo{
-    display: flex;
-    width: 5%;
-    align-items: center;
-    justify-content: center;
-}
-.img-logo{
-    width: 50px;
+color:white ;
 }
 .img-logo:hover{
-    scale: 1.2;
+    color: #1982cf;
+    scale: 1.08;
 }
 ul{
     display: flex;
