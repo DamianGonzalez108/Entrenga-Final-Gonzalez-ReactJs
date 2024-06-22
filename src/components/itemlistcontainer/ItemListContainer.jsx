@@ -53,7 +53,7 @@ const ItemListContainer = () => {
       <div className="itemListContainer"></div>
         <div className="divListContainer">
           <div className="divPortada">
-            <img src="/public/callofduty-portada.jpg" className="imgPortada" />
+            <img src="/callofduty-portada.jpg" className="imgPortada" />
           </div>
           <h1 className="tittlePages">
             {idCategory ? `${idCategory.toLocaleUpperCase()}` : "NOVEDADES"}

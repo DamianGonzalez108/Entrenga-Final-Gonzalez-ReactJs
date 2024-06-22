@@ -37,13 +37,16 @@
     align-items: flex-start;
 }
 .divTotal{
-    margin: 20px;
+    height: 150px;
+    text-align: center;
+    margin: 10px;
     width: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:rgba(0, 0, 0, .25);;
-    justify-content: space-around;
+    background-color: rgba(0, 0, 0, .25);
+    padding: 10px;
+    justify-content: center;
 }.divCardDescription{
     display: flex;
     width: 40%;
@@ -60,28 +63,25 @@ width: 40%;
     padding: 27px;
 }
 .cardCartProduct{
-    margin: 20px;
     display: flex;
-    height: 510px;
     width: 52%;
-    overflow-y: scroll;
     flex-direction: column;
     justify-content: flex-start;
-    scroll-behavior: smooth;
     align-items: center;
-    border-top: solid 1px white;
-    border-radius: 7px;
-}
-.cardCartProduct::-webkit-scrollbar{
-    width: 12px;
-}
-.cardCartProduct::-webkit-scrollbar-thumb{
-    background: transparent;
-    border: solid 2px #222222;
-    border-radius: 5px;
 }
 .buttonBuild,.buttonClear{
-    margin:10px 20px 10px 20px;
+    border-radius: 2px;
+    padding: 4px;
+    border: 1px solid transparent;
+    background-color: rgb(255 255 255 / 62%);
+}
+.buttonBuild:hover{
+    background-color: #1982cf;
+    scale: 1.04;
+}
+.buttonClear:hover{
+    background-color: #1982cf;
+    scale: 1.04;
 }
 .detailCart{
     display: flex;
@@ -90,12 +90,13 @@ width: 40%;
     flex-direction: column;
 }
 .divButtonCart{
+    height: 200px;
     width: 6%;
     border: 0px;
     background-color: transparent;
 }
 .divButtonCart:hover{
-    background-color: rgba(255, 0, 0, 0.59);
+    background-color: rgb(255 0 0 / 63%);
     transition: 1s;
 }
 .routeCart{
@@ -114,4 +115,18 @@ width: 40%;
 }
 .routeHome:hover{
     color: #22afdc;
+}
+.cartTxt{
+    font-size: 12px;
+}
+.divPrice{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.divButtonsCart{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin:10px 20px 10px 20px;
 }

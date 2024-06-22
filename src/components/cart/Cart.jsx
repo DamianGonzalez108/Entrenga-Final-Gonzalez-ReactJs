@@ -52,15 +52,15 @@ const Cart = () => {
           ))}
         </div>
         <div className="divTotal">
-          <div>
+          <div className="divPrice">
             <p>Total estimado</p>
             <p>${totalPrice()}</p>
           </div>
-          <p>
+          <p className="cartTxt">
             Los impuestos de venta se calcularan durante el pago (si es
             aplicable)
           </p>
-          <div>
+          <div className="divButtonsCart">
             <Link to="/checkout">
               <button className="buttonBuild">Finalizar compra</button>
             </Link>
