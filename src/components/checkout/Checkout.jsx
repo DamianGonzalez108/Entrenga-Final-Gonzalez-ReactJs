@@ -16,7 +16,10 @@ const Checkout = () => {
   const MySwal = withReactContent(Swal);
   const [dataForm, setDataForm] = useState({
     name: "",
+    lastName: "",
     phone: "",
+    address: "",
+    number: "",
     email: "",
     confirmEmail:"",
   });
@@ -47,7 +50,6 @@ const Checkout = () => {
           confirmButtonText: "Si",
           denyButtonText: `No`,
         }).then((result) => {
-          /* Read more about isConfirmed, isDenied below */
           if (result.isConfirmed) {
             generateOrder(order);
             Swal.fire("Guardado con exito", "", "success");

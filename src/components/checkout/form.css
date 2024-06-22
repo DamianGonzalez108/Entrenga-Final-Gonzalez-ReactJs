@@ -1,12 +1,48 @@
-.divForm{
-    display: flex;
-    height: 550px;
+.containerForm{
     width: 100%;
+    display: flex;
     justify-content: center;
-    align-items: center;
+}
+.divForm{
+    width: 48%;
 }
 .form{
+    border-radius: 2px ;
+    height: 425px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #051c2d;
+}
+.divTittleForm{
+    border-radius: 2px;
+    background-color: #0a3351;
+    width: 100%;
+}
+.tittleForm{
+    margin: 0px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputsForm{
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 3px;
+    padding: 5px;
+    width: 50%;
+}
+.btnOrden{
+    margin-top: 30px;
+    padding: 5px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btnOrden:hover{
+    scale: 1.03;
+    background-color: #1982cf;
+    border-radius: 4px;
 }

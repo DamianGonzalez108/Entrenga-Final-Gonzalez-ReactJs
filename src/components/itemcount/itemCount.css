@@ -20,13 +20,16 @@
     padding: 8px;
 }
 .buttonAddToCart{
-    border-radius: 9px;
-    border: 2px solid #222222;
+    border-radius: 3px;
+    border: 2px solid #171d25;
     font-weight: 600;
     padding: 5px;
 }
 .buttonAddToCart:hover{
-    scale: 1.08;
-    background-color: #22222263;
-    color: white;
+    scale: 1.05;
+    background-color: #1982cf;
 }
+
+
+
+

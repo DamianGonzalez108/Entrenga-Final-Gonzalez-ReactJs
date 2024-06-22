@@ -19,6 +19,7 @@
 }
 .buttonCart:hover{
     scale: 1.05;
+    background-color: #1982cf;
 }
 .divProductCart{
     height: 200px;
