@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import ItemLoading from "../itemloading/ItemLoading";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import db from "../../db/db";
+import { Link } from "react-router-dom";
 
 import "./itemListContainer.css";
 
@@ -51,15 +52,32 @@ const ItemListContainer = () => {
   return (
     <div>
       <div className="itemListContainer"></div>
-        <div className="divListContainer">
-          <div className="divPortada">
-            <img src="/callofduty-portada.jpg" className="imgPortada" />
-          </div>
-          <h1 className="tittlePages">
-            {idCategory ? `${idCategory.toLocaleUpperCase()}` : "NOVEDADES"}
-          </h1>
-          {loading ? <ItemLoading /> : <ItemList products={products} />}
+      <div className="divListContainer">
+        <div className="divPortada">
+          <img src="/callofduty-portada.jpg" className="imgPortada" />
         </div>
+        <h1 className="tittlePages">
+          {idCategory ? `${idCategory.toLocaleUpperCase()}` : "NOVEDADES"}
+        </h1>
+        <div className="divItemFilter">
+          <div className="divFilter">
+            <ul className="UllinksCategoty">
+              <Link to="/category/deportes" className="link-category">
+                DEPORTES
+              </Link>
+              <Link to="/category/shooter" className="link-category">
+                SHOOTER
+              </Link>
+              <Link to="/category/suspense" className="link-category">
+                SUSPENSE
+              </Link>
+            </ul>
+          </div>
+          <div className="divItems">
+            {loading ? <ItemLoading /> : <ItemList products={products} />}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

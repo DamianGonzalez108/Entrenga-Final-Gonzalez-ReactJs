@@ -1,19 +1,17 @@
 .detail-card{
     color:  #171d25;
-    margin-top: 50px;
     display: flex;
     align-items: center;
-    width: 100%;
-    justify-content: space-evenly;
+    width: 90%;
 }
 .div-img-detail{
+    height: 60vh;
     width: 40%;
     display: flex;
     justify-content: center;
-    background-color: #171d25;
 }
 .div-detail-product{
-    height: 355px;
+    height: 60vh;
     background-color: white;
     display: flex;
     text-align: center;
@@ -35,4 +33,56 @@
     .buttonToCart:hover{
         scale: 1.05;
         background-color: #1982cf;
+    }
+    .imgDetail{
+        width: 100%;
+    }
+
+
+    @media (max-width: 830px){
+        .detail-card{
+            width: 90%;
+            margin-top: 20px;
+        }
+        .div-detail-product{
+            height: 65vh;
+            width: 50%;
+            font-size: 12px;
+        }
+        .div-img-detail{
+            height: 65vh;
+            width: 50%;
+        }
+    }
+    @media (max-width: 450px){
+        .detail-card{
+            flex-direction: column;
+        }
+        .div-img-detail{
+            height: 38vh;
+            width: 90%;
+        }
+        .div-detail-product{
+            height: 42vh;
+            width: 90%;
+        }
+        .div-detail-product h2 {
+            margin: 0px;
+        }
+        .div-detail-product p{
+            margin: 0px;
+        }
+    }
+    @media (max-width: 300px){
+        .div-img-detail{
+            height: 35vh;
+            width: 95%;
+        }
+        .div-detail-product{
+            height: 45vh;
+            width: 95%;
+            font-size: 11px;
+            justify-content: space-evenly;
+        }
+
     }

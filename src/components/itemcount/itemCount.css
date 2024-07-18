@@ -30,6 +30,12 @@
     background-color: #1982cf;
 }
 
+@media (max-width: 830px){
+    .firstDivItemCount{
+        scale: 0.6;
+    }
+}
+
 
 
 

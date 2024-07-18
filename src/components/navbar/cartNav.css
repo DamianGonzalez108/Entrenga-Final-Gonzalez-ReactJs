@@ -5,6 +5,7 @@
     text-decoration: none;
     justify-content: center;
     align-items: center;
+    margin-right: 15px;
 }
 .cart-navbar:hover{
     scale: 1.08;

@@ -10,12 +10,8 @@ const NavBar = () => {
     <div className="divNavBar">
         <Link to="/" className="divLogo">
            <MdOutlineVideogameAsset size={40} className="img-logo"/>
+           <p>E-Games</p>
         </Link>
-        <ul>
-        <Link to="/category/deportes" className="link-category">DEPORTES</Link>
-        <Link to="/category/shooter" className="link-category">SHOOTER</Link>
-        <Link to="/category/suspense" className="link-category">SUSPENSE</Link>
-        </ul>
         <CartNav/>
     </div>
   )

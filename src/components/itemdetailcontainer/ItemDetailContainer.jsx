@@ -32,9 +32,6 @@ const ItemDetailContainer = () => {
 
   return (
     <div className="itemDetailContainer">
-      <h1 className="tittlePages">
-        {product.name ? `${product.name.toLocaleUpperCase()}` : "NOVEDADES"}
-      </h1>
       {loading ? <ItemLoading /> : <ItemDetail product={product} />}
     </div>
   );
