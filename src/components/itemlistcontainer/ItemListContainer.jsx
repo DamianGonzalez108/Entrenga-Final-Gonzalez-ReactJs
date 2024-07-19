@@ -53,15 +53,22 @@ const ItemListContainer = () => {
     <div>
       <div className="itemListContainer"></div>
       <div className="divListContainer">
-        <div className="divPortada">
-          <img src="/callofduty-portada.jpg" className="imgPortada" />
+        <div className="containerPortada">
+          <div className="divPortada"></div>
         </div>
+
         <h1 className="tittlePages">
           {idCategory ? `${idCategory.toLocaleUpperCase()}` : "NOVEDADES"}
         </h1>
         <div className="divItemFilter">
           <div className="divFilter">
+            <div className="divCategorytxt">
+              <p className="txtCartegory">CATEGORIAS</p>
+            </div>
             <ul className="UllinksCategoty">
+              <Link to="/" className="link-category">
+                TODOS
+              </Link>
               <Link to="/category/deportes" className="link-category">
                 DEPORTES
               </Link>

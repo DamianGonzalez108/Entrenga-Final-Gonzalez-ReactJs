@@ -1,13 +1,19 @@
-.cart-navbar{
-    width: 5%;
-    display: flex;
-    color: whitesmoke;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px;
+.cart-navbar {
+  width: 5%;
+  display: flex;
+  color: whitesmoke;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
 }
-.cart-navbar:hover{
-    scale: 1.08;
-    color: #1982cf;
+.cart-navbar:hover {
+  scale: 1.08;
+  color: #1982cf;
+}
+
+@media (max-width: 500px) {
+  .cart-navbar {
+    width: 20%;
+  }
 }

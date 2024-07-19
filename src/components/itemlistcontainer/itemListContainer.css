@@ -21,50 +21,135 @@
   color: whitesmoke;
   margin-top: 10px;
 }
+.containerPortada {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
 .divPortada {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 32vh;
+  background-image: url("/pexels-jeshoots-21067.webp");
+  background-size: cover;
+  background-position: center center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
-.imgPortada {
-  width: 90%;
-  height: 30vh;
-}
-.imgPortada:hover {
-  scale: 1.05;
+.divPortada:hover {
+  scale: 1.03;
   transition: 1s;
 }
 .divItemFilter {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
-.divFilter{
-    width: 20%;
+.divFilter {
+  width: 20%;
+  background-color: #ffffff7d;
+  height: 80vh;
 }
-.divItems{
-    width: 75%;
+.divItems {
+  width: 75%;
+}
+.txtCartegory {
+  font-weight: 400;
+  color: black;
+  height: 5vh;
+  margin: 0px;
+  font-size: 25px;
+}
+.divCategorytxt {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .UllinksCategoty {
   height: 30vh;
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-    width: 100%;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  width: 100%;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  flex-direction: column;
 }
 .link-category {
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 19px;
   font-weight: 400;
 }
 .link-category:hover {
-  scale: 1.08;
+  scale: 1.03;
   color: #1982cf;
   border-bottom: #1982cf 3px solid;
+}
+
+@media (max-width: 900px) {
+  .divItemFilter {
+    justify-content: center;
+  }
+  .divFilter {
+    width: 30%;
+  }
+  .divItems {
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  .txtCartegory {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .link-category {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .divItems {
+    width: 100%;
+  }
+  .divPortada {
+    height: 20vh;
+  }
+}
+@media (max-width: 500px) {
+  .divItemFilter {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tittlePages {
+    font-size: 15px;
+  }
+  .divCategorytxt {
+    height: 7vh;
+  }
+  .UllinksCategoty {
+    height: 3vh;
+    flex-direction: row;
+  }
+  .divFilter {
+    width: 100%;
+    height: 12vh;
+    margin-bottom: 15px;
+  }
+  .divPortada {
+    width: 95%;
+    height: 10vh;
+  }
+}
+@media (max-widht: 361px) {
+  .txtCartegory {
+    font-size: 14px;
+  }
+  .link-category {
+    font-size: 10px;
+  }
 }

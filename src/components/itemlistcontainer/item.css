@@ -1,39 +1,94 @@
-.card{
-    color: whitesmoke;
-    font-size: 20px;
-    font-weight: 600;
-    display: flex;
-    background-color: #171d258f;
-    border: 2px solid transparent;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 65vh;
-    width: 100%;
+.card {
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  background-color: #171d258f;
+  border: 2px solid transparent;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 65vh;
+  width: 100%;
 }
-.card:hover{
-    scale: 1.08;
-    transition: 0.70s;
+.card:hover {
+  scale: 1.08;
+  transition: 0.7s;
 }
-.imgLinkItem{
-    width: 100%;
-    height: 45vh;
-    border: none;
+.imgLinkItem {
+  width: 100%;
+  height: 45vh;
+  border: none;
 }
-.button-card{
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    border: 2px solid transparent;
-    padding: 5px;
-    margin-bottom: 10px;
+.button-card {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  border: 2px solid transparent;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: white;
 }
-.button-card:hover{
-    scale: 1.08;
-    background-color: #1982cf;
+.button-card:hover {
+  scale: 1.08;
+  background-color: #1982cf;
 }
-.linkItem{
-    height: 65vh;
-    width: 22%;
-    margin: 15px;
-    text-decoration: none;
+.linkItem {
+  height: 65vh;
+  width: 22%;
+  margin: 0px 15px 15px 15px;
+  text-decoration: none;
+}
+
+@media (max-width: 1100px) {
+  .linkItem {
+    width: 27%;
+  }
+}
+
+@media (max-width: 900px) {
+  .linkItem {
+    width: 35%;
+  }
+}
+@media (max-width: 700) {
+  .linkItem {
+    width: 40%;
+    height: 55vh;
+  }
+  .card {
+    height: 50vh;
+  }
+  .card p {
+    margin: 10px 0px;
+    font-size: 15px;
+  }
+  .imgLinkItem {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 361px) {
+  .card {
+    height: 40vh;
+  }
+  .card p {
+    margin: 10px 0px;
+    font-size: 13px;
+  }
+  .linkItem {
+    width: 38%;
+    height: 40vh;
+  }
+  .imgLinkItem {
+    height: 30vh;
+  }
+  .button-card {
+    font-size: 11px;
+  }
+  .button-card:hover {
+    scale: none;
+    padding: 3px;
+    margin-bottom: 0;
+  }
 }
