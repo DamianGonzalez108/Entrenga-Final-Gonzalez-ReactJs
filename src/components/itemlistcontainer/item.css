@@ -12,7 +12,7 @@
   width: 100%;
 }
 .card:hover {
-  scale: 1.08;
+  scale: 1.03;
   transition: 0.7s;
 }
 .imgLinkItem {
@@ -30,7 +30,7 @@
   color: white;
 }
 .button-card:hover {
-  scale: 1.08;
+  scale: 1.03;
   background-color: #1982cf;
 }
 .linkItem {
@@ -51,7 +51,7 @@
     width: 35%;
   }
 }
-@media (max-width: 700) {
+@media (max-width: 700px) {
   .linkItem {
     width: 40%;
     height: 55vh;
@@ -60,11 +60,16 @@
     height: 50vh;
   }
   .card p {
-    margin: 10px 0px;
+    margin: 5px 0px;
     font-size: 15px;
   }
   .imgLinkItem {
     height: 40vh;
+  }
+  .button-card {
+    margin-bottom: 0px;
+    font-size: 13px;
+    font-weight: 500;
   }
 }
 

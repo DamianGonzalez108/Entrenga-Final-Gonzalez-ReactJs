@@ -1,133 +1,272 @@
-.divContainerEmptyCart{
+.divContainerEmptyCart {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/Amumu_4.jpg");
+  background-size: cover;
+  background-position: center center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.divEmptyCart {
+  width: 30%;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #171d258f;
+}
+.linkSeeProducts {
+  text-decoration: none;
+}
+.buttonCart {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  border: 2px solid transparent;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: white;
+}
+.buttonCart:hover {
+  scale: 1.03;
+  background-color: #1982cf;
+}
+.divProductCart {
+  height: 30vh;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  align-items: center;
+}
+.divContainerCart {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.divTotal {
+  height: 30vh;
+  text-align: center;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  justify-content: space-evenly;
+}
+.divCardDescription {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.divImgCart {
+  width: 40%;
+  height: 30vh;
+}
+.imgProductCart {
+  height: 30vh;
+  width: 90%;
+}
+.cardCartProduct {
+  width: 52%;
+  height: 100%;
+}
+.buttonBuild,
+.buttonClear {
+  font-family: "Ubuntu", sans-serif;
+  border: 1px solid transparent;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: white;
+}
+.buttonBuild:hover {
+  background-color: #1982cf;
+  scale: 1.03;
+}
+.buttonClear:hover {
+  background-color: #1982cf;
+  scale: 1.03;
+}
+.detailCart {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  flex-direction: column;
+}
+.divButtonCart {
+  height: 30vh;
+  width: 6%;
+  border: 0px;
+  background-color: transparent;
+}
+.divButtonCart:hover {
+  background-color: rgb(255 0 0 / 63%);
+}
+.iconTrash {
+  color: rgb(255 0 0 / 63%);
+}
+.divButtonCart:hover .iconTrash {
+  color: black;
+}
+.routeCart {
+  color: gray;
+  margin: 0px 10px;
+}
+.divRoutes {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+.routeHome {
+  margin: 0px 10px;
+  color: white;
+  text-decoration: none;
+}
+.routeHome:hover {
+  color: #22afdc;
+}
+.cartTxt {
+  font-size: 12px;
+}
+.divPrice {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.divButtonsCart {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 900px) {
+  .imgProductCart {
+    width: 90%;
+  }
+  .divImgCart {
+    width: 46%;
+  }
+  .divCardDescription {
+    width: 46%;
+  }
+  .divButtonCart {
+    width: 8%;
+  }
+}
+
+@media (max-width: 700px) {
+  .divEmptyCart {
+    width: 45%;
+  }
+  .cardCartProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .divProductCart {
+    flex-direction: column;
+    width: 75%;
+    height: 50vh;
+  }
+  .divName h3 {
+    font-size: 14px;
+    margin: 5px 0px;
+  }
+  .divImgCart {
     width: 100%;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.divEmptyCart{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.linkSeeProducts{
-    text-decoration: none;
-}
-.buttonCart{
-    font-weight: 600;
-    border-radius: 5px;
-}
-.buttonCart:hover{
-    scale: 1.05;
-    background-color: #1982cf;
-}
-.divProductCart{
-    height: 200px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
+  }
+  .imgProductCart {
     width: 100%;
-    background: rgba(0, 0, 0, .25);;
-    align-items: center;
-}
-.divContainerCart{
+  }
+  .divButtonCart {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
+    height: 5vh;
+  }
 }
-.divTotal{
-    height: 150px;
-    text-align: center;
-    margin: 10px;
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(0, 0, 0, .25);
-    padding: 10px;
-    justify-content: center;
-}.divCardDescription{
-    display: flex;
-    width: 40%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+@media (max-width: 600px) {
+  .divTotal {
+    width: 48%;
+    padding: 0px;
+    margin: 0px;
+  }
 }
-.divImgCart{
-width: 40%;
-}
-.imgProductCart{
-    max-height: 140px;
-    width: 80%;
-    padding: 27px;
-}
-.cardCartProduct{
-    display: flex;
-    width: 52%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-.buttonBuild,.buttonClear{
-    border-radius: 2px;
-    padding: 4px;
-    border: 1px solid transparent;
-    background-color: rgb(255 255 255 / 62%);
-}
-.buttonBuild:hover{
-    background-color: #1982cf;
-    scale: 1.04;
-}
-.buttonClear:hover{
-    background-color: #1982cf;
-    scale: 1.04;
-}
-.detailCart{
-    display: flex;
-    align-items: center;
-    width: 80%;
-    flex-direction: column;
-}
-.divButtonCart{
-    height: 200px;
-    width: 6%;
-    border: 0px;
-    background-color: transparent;
-}
-.divButtonCart:hover{
-    background-color: rgb(255 0 0 / 63%);
-    transition: 1s;
-}
-.routeCart{
-    color:gray;
-    margin: 0px 10px ;
-}
-.divRoutes{
-    display: flex;
-    align-items: center;
-    margin: 20px;
-}
-.routeHome{
-    margin: 0px 10px ;
-    color: white;
-    text-decoration: none;
-}
-.routeHome:hover{
-    color: #22afdc;
-}
-.cartTxt{
+
+@media (max-width: 450px) {
+  .divEmptyCart {
+    width: 70%;
+  }
+  .divPrice {
     font-size: 12px;
-}
-.divPrice{
+  }
+  .divPrice p {
+    margin: 0;
+  }
+  .cartTxt {
+    font-size: 10px;
+  }
+  .buttonClear {
+    font-size: 12px;
+  }
+  .ancoreButtonBuild {
+    width: 60%;
+  }
+  .buttonBuild {
+    font-size: 12px;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+  }
+  .divButtonsCart {
+    flex-direction: column;
+    align-items: center;
+  }
+  .divProductCart {
+    width: 90%;
+  }
 }
-.divButtonsCart{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    margin:10px 20px 10px 20px;
+
+@media (max-width: 370px) {
+  .divTotal {
+    height: 35vh;
+  }
+  .divProductCart {
+    height: 47vh;
+  }
+  .buttonClear {
+    width: 65%;
+  }
+  .ancoreButtonBuild {
+    width: 70%;
+  }
+  .divContainerCart {
+    flex-direction: column;
+    align-items: center;
+  }
+  .divTotal {
+    width: 80%;
+  }
+  .cardCartProduct {
+    width: 80%;
+  }
+}
+
+@media (max-width: 260px) {
+  .divEmptyCart {
+    width: 80%;
+    font-size: 12px;
+  }
+  .buttonCart {
+    font-size: 11px;
+  }
 }

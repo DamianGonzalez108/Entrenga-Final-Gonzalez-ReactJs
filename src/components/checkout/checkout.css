@@ -1,8 +1,65 @@
 .divContainerCheckout{
-    margin-top: 15px;
+    height: 90vh;
     width: 100%;
     display: flex;
-    flex-direction: column;
     text-align: center;
     justify-content: center;
+    align-items: center;
+}
+.divContainerOrder{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/Amumu_34.webp");
+    background-size: cover;
+    background-position: center center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.divOrder{
+    width: 40%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #171d258f;
+}
+.buttonInicioCheckout{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    border: 2px solid transparent;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: white;
+}
+.buttonInicioCheckout:hover{
+    scale: 1.03;
+    background-color: #1982cf;
+}
+
+@media (max-width: 900px){
+    .divOrder{
+        width: 60%;
+    }
+}
+
+@media (max-width:600px){
+    .divOrder{
+        width: 70%;
+        font-size: 13px;
+    }
+}
+
+@media (max-width:420px){
+    .divOrder{
+        width: 90%;
+        font-size: 11px;
+    }
 }

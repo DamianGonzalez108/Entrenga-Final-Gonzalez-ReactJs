@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
-import "./checkout.css"
+import "./checkout.css";
 
 const Checkout = () => {
   const MySwal = withReactContent(Swal);
@@ -21,7 +21,7 @@ const Checkout = () => {
     address: "",
     number: "",
     email: "",
-    confirmEmail:"",
+    confirmEmail: "",
   });
 
   const [idOrder, setIdOrder] = useState(null);
@@ -41,24 +41,24 @@ const Checkout = () => {
     };
     try {
       const response = await validateForm(dataForm);
-      if (response.status === "success"){
-        if(dataForm.email === dataForm.confirmEmail){
-        MySwal.fire({
-          title: "¿Quieres guardar los cambios?",
-          showDenyButton: true,
-          showCancelButton: true,
-          confirmButtonText: "Si",
-          denyButtonText: `No`,
-        }).then((result) => {
-          if (result.isConfirmed) {
-            generateOrder(order);
-            Swal.fire("Guardado con exito", "", "success");
-          } else if (result.isDenied) {
-            Swal.fire("Los cambios no seran guardados", "", "info");
-          }
-        });
-        }else{
-          toast.warning("Verifica que tu email coincida")
+      if (response.status === "success") {
+        if (dataForm.email === dataForm.confirmEmail) {
+          MySwal.fire({
+            title: "¿Quieres guardar los cambios?",
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: "Si",
+            denyButtonText: `No`,
+          }).then((result) => {
+            if (result.isConfirmed) {
+              generateOrder(order);
+              Swal.fire("Guardado con exito", "", "success");
+            } else if (result.isDenied) {
+              Swal.fire("Los cambios no seran guardados", "", "info");
+            }
+          });
+        } else {
+          toast.warning("Verifica que tu email coincida");
         }
       } else {
         toast.warning(response.message);
@@ -102,13 +102,15 @@ const Checkout = () => {
   return (
     <div className="divContainerCheckout">
       {idOrder ? (
-        <div>
-          <h2>Orden generada con exito</h2>
-          <p>Guarde el id de su orden :{idOrder}</p>
-          <Link to="/">
-            {" "}
-            <button>Volver al inicio</button>
-          </Link>
+        <div className="divContainerOrder">
+          <div className="divOrder">
+            <h2>Orden generada con exito</h2>
+            <p>Guarde el id de su orden :{idOrder}</p>
+            <Link to="/">
+              {" "}
+              <button className="buttonInicioCheckout">Volver al inicio</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <Form

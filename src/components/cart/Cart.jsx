@@ -46,7 +46,7 @@ const Cart = () => {
                 className="divButtonCart"
                 onClick={() => deleteProduct(productCart.id)}
               >
-                <GoTrash size={20} />
+                <GoTrash size={20} className="iconTrash"/>
               </button>
             </div>
           ))}
@@ -61,7 +61,7 @@ const Cart = () => {
             aplicable)
           </p>
           <div className="divButtonsCart">
-            <Link to="/checkout">
+            <Link to="/checkout" className="ancoreButtonBuild">
               <button className="buttonBuild">Finalizar compra</button>
             </Link>
             <button onClick={deleteAll} className="buttonClear">
